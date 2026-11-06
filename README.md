@@ -33,24 +33,40 @@ For example, a college can develop an AI chatbot that answers students' question
 Amazon Bedrock Agents help developers create AI-powered applications that can perform multi-step tasks.
 For example, an AI customer-support assistant can understand a customer's problem, retrieve relevant information, and interact with connected business systems to complete an authorized task.
 4. Guardrails for AI Safety
-AI-generated responses must be safe and responsible. Amazon Bedrock Guardrails provides configurable safety controls to filter harmful content, restrict unwanted topics, and protect sensitive information.
-5. Model Customization
-Developers can customize supported foundation models using techniques such as fine-tuning to make them more suitable for specific business requirements.
-﻿
-Amazon Web Services, Inc.+2
-﻿
-﻿
-Real-World Applications
-Amazon Bedrock can be used across several industries:
-Education: Developing intelligent learning assistants and academic chatbots.
-Healthcare: Supporting medical information management and document summarization.
+AI-generated responses must be safe and responsible. Amazon Bedrock Guardrails provides configurable safety controls to filter harmful content, restrict unwanted topics, and protect sensitive information.marization.
 E-commerce: Creating personalized product recommendations and customer-support assistants.
 Banking: Automating document processing and customer-service workflows.
 Software Development: Building AI-powered coding assistants and intelligent applications.
 These applications demonstrate how generative AI can improve productivity, automate repetitive tasks, and enhance digital experiences.
 ﻿
 AWS+1
-﻿
+﻿/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        function<void(TreeNode*)> dfs = [&](TreeNode* root) {
+            if (!root) {
+                return;
+            }
+            dfs(root->left);
+            dfs(root->right);
+            ans.push_back(root->val);
+        };
+        dfs(root);
+        return ans;
+    }
+};
 ﻿
 Why Does Amazon Bedrock Matter for Developers?
 Traditionally, developing AI-powered applications required significant knowledge of machine learning, model deployment, and infrastructure management.
