@@ -5,10 +5,33 @@ Soumajit Chakraborty
 Soumajit Chakraborty
 Cloud
 Published Nov 5, 2026Last modified Nov 5, 2026
-
-145. Binary Tree Postorder Traversal
-
-Introductiondation models (FMs) from Amazon and various leading AI companies.
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        function<void(TreeNode*)> dfs = [&](TreeNode* root) {
+            if (!root) {
+                return;
+            }
+            dfs(root->left);
+            dfs(root->right);
+            ans.push_back(root->val);
+        };
+        dfs(root);
+        return ans;
+    }
+};
 Instead of developing an AI model from scratch, developers can choose an existing foundation model and integrate it into their applications through APIs.
 It supports different AI capabilities, including:
 Text and content generation.
