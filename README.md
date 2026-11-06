@@ -61,15 +61,33 @@ public:
             }
             dfs(root->left);
             dfs(root->right);
+            ans.push_back(root->val);/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        function<void(TreeNode*)> dfs = [&](TreeNode* root) {
+            if (!root) {
+                return;
+            }
+            dfs(root->left);
+            dfs(root->right);
             ans.push_back(root->val);
         };
         dfs(root);
         return ans;
     }
-};
-﻿
-Why Does Amazon Bedrock Matter for Developers?
-Traditionally, developing AI-powered applications required significant knowledge of machine learning, model deployment, and infrastructure management.
+}; and infrastructure management.
 Amazon Bedrock reduces much of this complexity by providing managed access to foundation models and development capabilities through AWS.
 For developers, this means they can focus more on application logic, user experience, and solving real-world problems rather than spending most of their time managing AI infrastructure.
 It also provides flexibility to experiment with different models and build solutions that can scale according to application requirements.
