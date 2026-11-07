@@ -56,6 +56,7 @@ Amazon Bedrock provides access to foundation models from different providers, in
 Knowledge Bases allow developers to connect AI models with their own data.
 Using Retrieval-Augmented Generation (RAG), an application can retrieve relevant information from connected documents and use it to generate more contextually relevant responses.
 For example, a college can develop an AI chatbot that answers students' questions using official academic regulations and college documents.
+For example, a college can develop an AI chatbot that answerVs students' questions using official academic regulations and college documents.
 3. AI Agents
 Amazon Bedrock Agents help developers create AI-powered applications that can perform multi-step tasks.
 For example, an AI customer-support assistant can understand a customer's problem, retrieve relevant information, and interact with connected business systems to complete an authorized task.
