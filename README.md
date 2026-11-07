@@ -1,6 +1,6 @@
 Amazon Bedrock: Simplifying Generative AI Development
 Discover how Amazon Bedrock is making generative AI development easier by providing access to powerful foundation models through a single managed service. Explore its features, applications, and how it is helping developers build intelligent, scalable AI-powered solutions without managing complex machine learning infrastructure.
-
+ALTHOUGH IT WAS GREAT
 Soumajit Chakraborty
 Soumajit Chakraborty
 Cloud
