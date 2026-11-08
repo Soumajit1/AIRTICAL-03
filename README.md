@@ -160,13 +160,25 @@ public:
         vector<int> ans;
         function<void(TreeNode*)> dfs = [&](TreeNode* root) {
             if (!root) {
-                return;
+                return;class Solution {
+public:
+    bool isPalindrome(string s) {
+        int i = 0, j = s.size() - 1;
+        while (i < j) {
+            if (!isalnum(s[i])) {
+                ++i;
+            } else if (!isalnum(s[j])) {
+                --j;
+            } else if (tolower(s[i]) != tolower(s[j])) {
+                return false;
+            } else {
+                ++i;
+                --j;
             }
-            dfs(root->left);
-            dfs(root->right);
-            ans.push_back(root->val);
-        };
-        dfs(root);
+        }
+        return true;
+    }
+};
         return ans;
     }
 }; and infrastructure management.
