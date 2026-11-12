@@ -3,10 +3,8 @@
  * struct TreeNode {
  *     int val;
  *     TreeNode *left;
- *     TreeNode *right;class Solution {
-public:
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end());class Solution {
+ *     TreeNode *right;class SolutWhat is your Game Idea Concept ?
+*ss Solution {
 public:class Solution {
 public:class Solution {
 public:
