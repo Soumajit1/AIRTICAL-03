@@ -6,9 +6,8 @@
  *     TreeNode *right;class SolutWhat is your Game Idea Concept ?
 *ss Solution {
 public:class Solution {
-public:class Solution {
-public:
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {What is your Game Idea Concept ?
+public:class Solution {What is your Game Idea Concept ?
+*ame Idea Concept ?
 *
                 ed = intervals[i][1];
             } else {
