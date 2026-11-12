@@ -8,10 +8,8 @@
 public:class Solution {
 public:class Solution {
 public:
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end());What is your Game Idea Concept ?
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {What is your Game Idea Concept ?
 *
-                st = intervals[i][0];
                 ed = intervals[i][1];
             } else {
                 ed = max(ed, intervals[i][1]);
