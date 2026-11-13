@@ -11,3 +11,20 @@ Popular cloud hosting providers include Amazon Web Services (AWS), Microsoft Azu
 Despite its advantages, cloud hosting has some challenges, including internet dependency, data security risks, vendor lock-in, and unexpected operational costs. Proper planning and security management are essential to overcome these challenges.
 
 In conclusion, cloud hosting has become an important part of modern digital infrastructure. Its flexibility, scalability, reliability, and cost-effectiveness make it a valuable solution for startups, enterprises, and developers. With the continuous growth of cloud computing, it will remain a key technology in shaping the future of digital innovation.
+
+
+ class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        int l = 0, r = nums.size();
+        while (l < r) {
+            int mid = (l + r) >> 1;
+            if (nums[mid] >= target) {
+                r = mid;
+            } else {
+                l = mid + 1;
+            }
+        }
+        return l;
+    }
+};
